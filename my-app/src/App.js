@@ -15,32 +15,33 @@ const Calculator = () => {
     }
   };
 
- // Hàm 2: Thực hiện phép tính
- const performOperation = (operator) => {
-  setDisplay(display + operator);
-  setEquation(equation + operator);
-};
+  // Hàm 2: Thực hiện phép tính
+  const performOperation = (operator) => {
+    setDisplay(display + operator);
+    setEquation(equation + operator);
+  };
 
-// Hàm 3: Xóa màn hình
-const clearDisplay = () => {
-  setDisplay('0');
-  setEquation('');
-};
+  // Hàm 3: Xóa màn hình
+  const clearDisplay = () => {
+    setDisplay("0");
+    setEquation("");
+  };
 
-// Hàm 4: Tính toán kết quả
-const calculateResult = () => {
-  try {
-    const result = eval(equation);
-    setDisplay(result.toString());
-    setEquation(result.toString());
-  } catch (error) {
-    setDisplay('Error');
-    setEquation('');
-  }
-};
+  // Hàm 4: Tính toán kết quả
+  const calculateResult = () => {
+    try {
+      const result = eval(equation);
+      setDisplay(result.toString());
+      setEquation(result.toString());
+    } catch (error) {
+      setDisplay("Error");
+      setEquation("");
+    }
+  };
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+      <h1 className="text-blue-400">Máy tính</h1>
       <div className="bg-white p-4 rounded-lg shadow-lg">
         <div className="mb-4 p-2 bg-gray-200 rounded">
           <div className="text-right text-2xl">{display}</div>
