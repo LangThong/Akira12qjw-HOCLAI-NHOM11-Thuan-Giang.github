@@ -15,14 +15,29 @@ const Calculator = () => {
     }
   };
 
-  // Hàm 2: Thực hiện phép tính
-  const performOperation = (operator) => {};
+ // Hàm 2: Thực hiện phép tính
+ const performOperation = (operator) => {
+  setDisplay(display + operator);
+  setEquation(equation + operator);
+};
 
-  // Hàm 3: Xóa màn hình
-  const clearDisplay = () => {};
+// Hàm 3: Xóa màn hình
+const clearDisplay = () => {
+  setDisplay('0');
+  setEquation('');
+};
 
-  // Hàm 4: Tính toán kết quả
-  const calculateResult = () => {};
+// Hàm 4: Tính toán kết quả
+const calculateResult = () => {
+  try {
+    const result = eval(equation);
+    setDisplay(result.toString());
+    setEquation(result.toString());
+  } catch (error) {
+    setDisplay('Error');
+    setEquation('');
+  }
+};
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
