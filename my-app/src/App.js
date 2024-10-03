@@ -5,7 +5,15 @@ const Calculator = () => {
   const [equation, setEquation] = useState("");
 
   // Hàm 1: Nhập số và toán tử
-  const inputDigit = (value) => {};
+  const inputDigit = (value) => {
+    if (display === "0") {
+      setDisplay(value);
+      setEquation(value);
+    } else {
+      setDisplay(display + value);
+      setEquation(equation + value);
+    }
+  };
 
   // Hàm 2: Thực hiện phép tính
   const performOperation = (operator) => {};
