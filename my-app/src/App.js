@@ -41,7 +41,7 @@ const Calculator = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <h1 className="text-blue-400">Máy tính</h1>
+      <h1 className="text-blue-600">Máy tính Pro</h1>
       <div className="bg-white p-4 rounded-lg shadow-lg">
         <div className="mb-4 p-2 bg-gray-200 rounded">
           <div className="text-right text-2xl">{display}</div>
@@ -53,7 +53,7 @@ const Calculator = () => {
               onClick={() =>
                 btn === "/" ? performOperation(btn) : inputDigit(btn)
               }
-              className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
+              className="bg-blue-300 text-white p-2 rounded hover:bg-blue-600"
             >
               {btn}
             </button>
@@ -108,7 +108,7 @@ const Calculator = () => {
             onClick={clearDisplay}
             className="col-span-4 bg-red-500 text-white p-2 rounded hover:bg-red-600"
           >
-            Clear
+            Xóa
           </button>
         </div>
       </div>
