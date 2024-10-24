@@ -4,7 +4,7 @@ const Calculator = () => {
   const [display, setDisplay] = useState("0");
   const [equation, setEquation] = useState("");
 
-  // Hàm 1: Nhập số và toán tử
+  // Hàm 1: Nhập số và toán tử code logic done
   const inputDigit = (value) => {
     if (display === "0") {
       setDisplay(value);
